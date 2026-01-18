@@ -15,15 +15,26 @@ struct ContentView: View {
     }
     var body: some View {
         VStack {
-            Text("PREMIUM")
+            Text(viewModel.isPremium ? "PREMIUM" : "")
+                .foregroundColor(Color.green)
                 .font(.largeTitle)
                 .bold()
                 .frame(width: 200, height: 200)
             Text("\(viewModel.value)")
                 .font(.title)
-            Button("Increment") {
-                self.viewModel.updateCounter()
+            HStack {
+                Button("Increment") {
+                    self.viewModel.updateCounter()
+                }
+                Button("Decrement") {
+                    self.viewModel.lowerCounter()
+                }
+                Button("Clear") {
+                    self.viewModel.resetCounter()
+                }
             }
+            .padding(.horizontal, 16)
+
         }
         .padding()
     }

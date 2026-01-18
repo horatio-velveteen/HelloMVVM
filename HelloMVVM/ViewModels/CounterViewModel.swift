@@ -10,7 +10,19 @@ class CounterViewModel: ObservableObject {
         counter.value
     }
     
+    var isPremium: Bool {
+        return counter.isPremium
+    }
+    
     func updateCounter() {
         counter.increment()
+    }
+    
+    func lowerCounter() {
+        counter.decrement()
+    }
+    
+    func resetCounter() {
+        counter.reset()
     }
 }
