@@ -1,6 +1,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 class CounterViewModel: ObservableObject {
     @Published private var counter: Counter = Counter()

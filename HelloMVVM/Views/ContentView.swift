@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: CounterViewModel
+    
+    init() {
+        viewModel = CounterViewModel()
+    }
     var body: some View {
         VStack {
             Text("PREMIUM")
