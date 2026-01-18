@@ -14,5 +14,10 @@ struct Counter {
     
     mutating func increment() {
         value += 1
+        if value.isMultiple(of: 3) {
+
+        } else {
+            
+        }
     }
 }
